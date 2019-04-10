@@ -6,19 +6,19 @@ import './App.css';
 export default () => (
     <div className="container">
         <ReactiveBase
-            app="airbeds-test-app"
-            credentials="X8RsOu0Lp:9b4fe1a4-58c6-4089-a042-505d86d9da30"
+            app="uBoat-test-app"
+            credentials="3qrO6vlEh:dcef3f3f-0fa8-4f58-aeed-61c0dfc61718"
             theme={{
                 primaryColor: '#FF3A4E',
             }}
         >
             <nav className="nav">
-                <div className="title">Airbeds</div>
+                <div className="title">uBoat</div>
                 <DataSearch
                     componentId="SearchSensor"
                     dataField="name"
                     autosuggest={false}
-                    placeholder="Search by house names"
+                    placeholder="Search by boat names"
                     iconPosition="left"
                     className="search"
                     highlight={true}
@@ -35,9 +35,9 @@ export default () => (
                 />
 
                 <NumberBox
-                    componentId="GuestSensor"
+                    componentId="PassengerSensor"
                     dataField="accommodates"
-                    title="Guests"
+                    title="Passengers"
                     defaultSelected={2}
                     labelPosition="right"
                     data={{
@@ -51,12 +51,12 @@ export default () => (
                     dataField="price"
                     title="Price Range"
                     range={{
-                        start: 10,
-                        end: 250,
+                        start: 250,
+                        end: 5000,
                     }}
                     rangeLabels={{
-                        start: '$10',
-                        end: '$250',
+                        start: '$250',
+                        end: '$5000',
                     }}
                     defaultSelected={{
                         start: 10,
@@ -88,7 +88,7 @@ export default () => (
                 })}
                 pagination
                 react={{
-                    and: ['SearchSensor', 'GuestSensor', 'PriceSensor', 'DateRangeSensor', 'search'],
+                    and: ['SearchSensor', 'PassengerSensor', 'PriceSensor', 'DateRangeSensor', 'search'],
                 }}
                 innerClass={{
                     resultStats: 'result-stats',
