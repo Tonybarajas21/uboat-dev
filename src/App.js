@@ -13,7 +13,7 @@ export default () => (
             }}
         >
             <nav className="nav">
-                <div className="title">uBoat</div>
+                <div className="title" href="/"><i className="fas fa-ship"></i>uBoat</div>
                 <DataSearch
                     componentId="SearchSensor"
                     dataField="name"
@@ -23,6 +23,8 @@ export default () => (
                     className="search"
                     highlight={true}
                 />
+                {/* Logout should go to landing page */}
+                <div className="logout" href="#">Logout</div>
             </nav>
             <div className="left-col">
                 <DateRange
