@@ -6,7 +6,7 @@ import './App.css';
 export default () => (
     <div className="container">
         <ReactiveBase
-            app="uBoat-test-app"
+            app="uBoat"
             credentials="3qrO6vlEh:dcef3f3f-0fa8-4f58-aeed-61c0dfc61718"
             theme={{
                 primaryColor: '#FF3A4E',
@@ -31,7 +31,7 @@ export default () => (
                     title="When"
                     numberOfMonths={2}
                     queryFormat="basic_date"
-                    initialMonth={new Date('04-01-2017')}
+                    initialMonth={new Date('04-01-2019')}
                 />
 
                 <NumberBox
