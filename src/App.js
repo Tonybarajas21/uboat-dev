@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { ReactiveBase, DataSearch, NumberBox, DateRange, RangeSlider, ResultCard } from '@appbaseio/reactivesearch';
 
 import './App.css';
-import boats from './boats.json';
 
 export default () => (
     <div className="container">
@@ -62,8 +61,8 @@ export default () => (
                         end: '$5000',
                     }}
                     defaultSelected={{
-                        start: 10,
-                        end: 50,
+                        start: 250,
+                        end: 5000,
                     }}
                     stepValue={10}
                     interval={20}
@@ -84,7 +83,7 @@ export default () => (
                     description: (
                         <div>
                             <div className="price">${data.price}</div>
-                            <p className="info">{data.room_type} · {data.accommodates} guests</p>
+                            <p className="info">{data.boat_type} · {data.accommodates} passengers</p>
                         </div>
                     ),
                     url: data.listing_url,
