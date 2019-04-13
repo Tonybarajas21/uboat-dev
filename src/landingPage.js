@@ -17,7 +17,7 @@ export default class LandingPage extends Component {
                             <a href="/">Link</a>
                         </Navigation>
                     </Header>
-                    <Drawer title="Title">
+                    <Drawer title="Logo">
                         <Navigation>
                             <a href="/">Link</a>
                             <a href="/">Link</a>
