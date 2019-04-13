@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { ReactiveBase, DataSearch, NumberBox, DateRange, RangeSlider, ResultCard } from '@appbaseio/reactivesearch';
 
 import './App.css';
+import boats from './boats.json';
 
 export default () => (
     <div className="container">
