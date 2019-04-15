@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
-import { ReactiveBase, DataSearch, NumberBox, DateRange, RangeSlider, ResultCard } from '@appbaseio/reactivesearch';
+import { ReactiveBase, DataSearch, DateRange, RangeSlider, ResultCard } from '@appbaseio/reactivesearch';
 
 import './App.css';
 
 export default () => (
     <div className="container">
         <ReactiveBase
-            app="uBoat"
-            credentials="3qrO6vlEh:dcef3f3f-0fa8-4f58-aeed-61c0dfc61718"
+            app="uboat"
+            credentials="i278ZlbWK:60641181-3bde-42f1-bdde-3a51daea9f77"
             theme={{
                 primaryColor: '#FF3A4E',
             }}
         >
             <nav className="nav">
-                <div className="title" href="/"><i className="fas fa-ship"></i>uBoat</div>
+                <div className="title">StowAway</div>
                 <DataSearch
                     componentId="SearchSensor"
                     dataField="name"
@@ -23,8 +23,6 @@ export default () => (
                     className="search"
                     highlight={true}
                 />
-                {/* Logout should go to landing page */}
-                <div className="logout" href="#">Logout</div>
             </nav>
             <div className="left-col">
                 <DateRange
@@ -33,19 +31,7 @@ export default () => (
                     title="When"
                     numberOfMonths={2}
                     queryFormat="basic_date"
-                    initialMonth={new Date('04-01-2019')}
-                />
-
-                <NumberBox
-                    componentId="PassengerSensor"
-                    dataField="accommodates"
-                    title="Passengers"
-                    defaultSelected={2}
-                    labelPosition="right"
-                    data={{
-                        start: 1,
-                        end: 16,
-                    }}
+                    initialMonth={new Date('04-01-2017')}
                 />
 
                 <RangeSlider
@@ -65,7 +51,7 @@ export default () => (
                         end: 5000,
                     }}
                     stepValue={10}
-                    interval={20}
+                    interval={50}
                     react={{
                         and: ['DateRangeSensor'],
                     }}
@@ -83,14 +69,13 @@ export default () => (
                     description: (
                         <div>
                             <div className="price">${data.price}</div>
-                            <p className="info">{data.boat_type} · {data.accommodates} passengers</p>
                         </div>
                     ),
                     url: data.listing_url,
                 })}
-                pagination
+                pagination={false}
                 react={{
-                    and: ['SearchSensor', 'PassengerSensor', 'PriceSensor', 'DateRangeSensor', 'search'],
+                    and: ['SearchSensor', 'GuestSensor', 'PriceSensor', 'DateRangeSensor', 'search'],
                 }}
                 innerClass={{
                     resultStats: 'result-stats',

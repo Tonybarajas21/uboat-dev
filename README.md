@@ -13,4 +13,3 @@ A how to build post is available over [here](https://scotch.io/tutorials/build-a
 The source code is available under MIT License.
 
 
-# uboat-dev
