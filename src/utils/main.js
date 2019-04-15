@@ -1,26 +1,23 @@
-<<<<<<< HEAD
+
 import React, { Component } from 'react';
-import { ReactiveBase, DataSearch, DateRange, RangeSlider, ResultCard } from '@appbaseio/reactivesearch';
-=======
-import React from 'react';
-import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
-import Main from './utils/main';
-import LandingPage from './landingPage';
->>>>>>> c8bb2c11df2ce53c71aa8b27b0b15ac1299cf5be
+import { ReactiveBase, DataSearch, NumberBox, DateRange, RangeSlider, ResultCard } from '@appbaseio/reactivesearch';
+import "./Main.css"
 
+export default class Main extends Component {
+    state = {}
 
-<<<<<<< HEAD
-export default () => (
+    render() {
+        return (
     <div className="container">
         <ReactiveBase
-            app="uboat"
-            credentials="i278ZlbWK:60641181-3bde-42f1-bdde-3a51daea9f77"
+            app="uBoat"
+            credentials="3qrO6vlEh:dcef3f3f-0fa8-4f58-aeed-61c0dfc61718"
             theme={{
                 primaryColor: '#FF3A4E',
             }}
         >
             <nav className="nav">
-                <div className="title">StowAway</div>
+                <div className="title" href="/"><i className="fas fa-ship"></i>uBoat</div>
                 <DataSearch
                     componentId="SearchSensor"
                     dataField="name"
@@ -30,6 +27,8 @@ export default () => (
                     className="search"
                     highlight={true}
                 />
+                {/* Logout should go to landing page */}
+                <div className="logout" href="#">Logout</div>
             </nav>
             <div className="left-col">
                 <DateRange
@@ -39,6 +38,18 @@ export default () => (
                     numberOfMonths={2}
                     queryFormat="basic_date"
                     initialMonth={new Date('04-01-2017')}
+                />
+
+                <NumberBox
+                    componentId="PassengerSensor"
+                    dataField="accommodates"
+                    title="Passengers"
+                    defaultSelected={2}
+                    labelPosition="right"
+                    data={{
+                        start: 1,
+                        end: 16,
+                    }}
                 />
 
                 <RangeSlider
@@ -54,11 +65,11 @@ export default () => (
                         end: '$5000',
                     }}
                     defaultSelected={{
-                        start: 250,
-                        end: 5000,
+                        start: 10,
+                        end: 50,
                     }}
                     stepValue={10}
-                    interval={50}
+                    interval={20}
                     react={{
                         and: ['DateRangeSensor'],
                     }}
@@ -76,13 +87,14 @@ export default () => (
                     description: (
                         <div>
                             <div className="price">${data.price}</div>
+                            <p className="info">{data.room_type} · {data.accommodates} guests</p>
                         </div>
                     ),
                     url: data.listing_url,
                 })}
-                pagination={false}
+                pagination
                 react={{
-                    and: ['SearchSensor', 'GuestSensor', 'PriceSensor', 'DateRangeSensor', 'search'],
+                    and: ['SearchSensor', 'PassengerSensor', 'PriceSensor', 'DateRangeSensor', 'search'],
                 }}
                 innerClass={{
                     resultStats: 'result-stats',
@@ -92,17 +104,8 @@ export default () => (
                 }}
             />
         </ReactiveBase>
-=======
-const App = () => (
-    <Router>
-        <div>
-    <Switch>
-        <Route exact path ="/" component={LandingPage} />
-        <Route exact path="/Main" component={Main} />
-    </Switch>
->>>>>>> c8bb2c11df2ce53c71aa8b27b0b15ac1299cf5be
     </div>
-    </Router>
-)
+         )}
+};
 
-export default App;
+
