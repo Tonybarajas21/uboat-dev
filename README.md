@@ -1,6 +1,6 @@
 ## Airbeds App
 
-![Airbeds app image](https://i.imgur.com/06wpxko.png)
+![Airbeds app image](https://i.imgur.com/HgHypc8.png)
 
 Airbeds app demos the use of [ReactiveSearch](https://github.com/appbaseio/reactivesearch) for building a search UI.
 
