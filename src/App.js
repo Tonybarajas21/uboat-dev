@@ -1,15 +1,8 @@
-<<<<<<< HEAD
 import React, { Component } from 'react';
 import { ReactiveBase, DataSearch, DateRange, RangeSlider, ResultCard } from '@appbaseio/reactivesearch';
-=======
-import React from 'react';
-import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
-import Main from './utils/main';
-import LandingPage from './landingPage';
->>>>>>> c8bb2c11df2ce53c71aa8b27b0b15ac1299cf5be
 
+import './App.css';
 
-<<<<<<< HEAD
 export default () => (
     <div className="container">
         <ReactiveBase
@@ -20,7 +13,7 @@ export default () => (
             }}
         >
             <nav className="nav">
-                <div className="title">StowAway</div>
+                <div className="title">Stowaway</div>
                 <DataSearch
                     componentId="SearchSensor"
                     dataField="name"
@@ -40,6 +33,18 @@ export default () => (
                     queryFormat="basic_date"
                     initialMonth={new Date('04-01-2017')}
                 />
+
+                {/* <NumberBox
+                    componentId="GuestSensor"
+                    dataField="accommodates"
+                    title="Guests"
+                    defaultSelected={2}
+                    labelPosition="right"
+                    data={{
+                        start: 1,
+                        end: 16,
+                    }}
+                /> */}
 
                 <RangeSlider
                     componentId="PriceSensor"
@@ -92,17 +97,5 @@ export default () => (
                 }}
             />
         </ReactiveBase>
-=======
-const App = () => (
-    <Router>
-        <div>
-    <Switch>
-        <Route exact path ="/" component={LandingPage} />
-        <Route exact path="/Main" component={Main} />
-    </Switch>
->>>>>>> c8bb2c11df2ce53c71aa8b27b0b15ac1299cf5be
     </div>
-    </Router>
-)
-
-export default App;
+);

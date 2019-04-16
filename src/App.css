@@ -94,7 +94,6 @@
   color: #666;
   font-size: 15px;
 }
-
 @media all and (min-width: 1441px) {
   .container .right-col .list-item {
     width: calc(25% - 16px);
