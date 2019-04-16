@@ -34,18 +34,6 @@ export default () => (
                     initialMonth={new Date('04-01-2017')}
                 />
 
-                {/* <NumberBox
-                    componentId="GuestSensor"
-                    dataField="accommodates"
-                    title="Guests"
-                    defaultSelected={2}
-                    labelPosition="right"
-                    data={{
-                        start: 1,
-                        end: 16,
-                    }}
-                /> */}
-
                 <RangeSlider
                     componentId="PriceSensor"
                     dataField="price"
