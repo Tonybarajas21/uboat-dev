@@ -16,9 +16,6 @@
   height: 52px;
   padding: 0 25px;
 }
-.container .nav .title .fa-ship {
-  margin-right: .5vh;
-}
 .container .nav .search {
   margin-left: auto;
   margin-right: auto;
@@ -97,6 +94,15 @@
   color: #666;
   font-size: 15px;
 }
+
+.form-group {
+  width: 20rem;
+}
+.form-area {
+  margin-top: 20rem;
+}
+
+
 
 @media all and (min-width: 1441px) {
   .container .right-col .list-item {

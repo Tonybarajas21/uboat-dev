@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import { ReactiveBase, DataSearch, NumberBox, DateRange, RangeSlider, ResultCard } from '@appbaseio/reactivesearch';
-import "./Main.css"
+import "./App.css"
 
 export default class Main extends Component {
     state = {}
@@ -10,14 +10,14 @@ export default class Main extends Component {
         return (
     <div className="container">
         <ReactiveBase
-            app="uBoat"
+            app="uboat"
             credentials="3qrO6vlEh:dcef3f3f-0fa8-4f58-aeed-61c0dfc61718"
             theme={{
                 primaryColor: '#FF3A4E',
             }}
         >
             <nav className="nav">
-                <div className="title" href="/"><i className="fas fa-ship"></i>uBoat</div>
+                <div className="title" href="/"><i className="fas fa-ship"></i>Stowaway</div>
                 <DataSearch
                     componentId="SearchSensor"
                     dataField="name"
