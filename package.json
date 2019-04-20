@@ -2,15 +2,24 @@
   "name": "airbeds",
   "version": "0.1.0",
   "private": true,
-  "homepage" : "https://appbaseio-apps.github.io/airbeds",
+  "homepage": "https://appbaseio-apps.github.io/airbeds",
   "devDependencies": {
     "gh-pages": "^1.1.0",
     "react-scripts": "1.0.17"
   },
   "dependencies": {
-    "@appbaseio/reactivesearch": "^2.0.0-beta-01",
+    "@appbaseio/reactivesearch": "^3.0.0-rc.4",
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
     "create-react-app": "^1.4.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-ejs-layouts": "^2.5.0",
+    "express-session": "^1.16.1",
     "global": "^4.3.2",
+    "mongoose": "^5.5.2",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },
@@ -20,6 +29,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "dev": "nodemon app.js"
   }
 }
