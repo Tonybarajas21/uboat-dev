@@ -8,20 +8,19 @@
     "react-scripts": "1.0.17"
   },
   "dependencies": {
-    "@appbaseio/reactivesearch": "^3.0.0-rc.4",
-    "bcryptjs": "^2.4.3",
-    "connect-flash": "^0.1.1",
+    "@appbaseio/reactivesearch": "^2.0.0-beta-01",
+    "@jonny/react-video-cover": "^1.1.0",
+    "@material-ui/core": "^3.9.3",
     "create-react-app": "^1.4.3",
-    "ejs": "^2.6.1",
-    "express": "^4.16.4",
-    "express-ejs-layouts": "^2.5.0",
-    "express-session": "^1.16.1",
     "global": "^4.3.2",
-    "mongoose": "^5.5.2",
-    "passport": "^0.4.0",
-    "passport-local": "^1.0.0",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "react-images-upload": "^1.2.6",
+    "react-mdl": "^1.11.0",
+    "react-native": "^0.59.5",
+    "react-native-video": "^4.4.1",
+    "react-router-dom": "^5.0.0",
+    "react-video-cover": "^1.2.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -29,7 +28,6 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "dev": "nodemon app.js"
+    "deploy": "gh-pages -d build"
   }
 }
